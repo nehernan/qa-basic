@@ -8,13 +8,17 @@ interface TableContentProps {
     link: string;
     duration: string;
     onClickVideo: (link: string) => void
+    isActive: boolean; // Nueva propiedad para indicar si está activo
 }
 
-export const TablesContent: React.FC<TableContentProps> = ({title, link, duration, onClickVideo  }) => {
+export const TablesContent: React.FC<TableContentProps> = ({title, link, duration, onClickVideo, isActive, }) => {
   return (
-    <div className={styles.tabletContentContainer}>
+    <div className={`${styles.tabletContentContainer} ${
+        isActive ? styles.videoOpen : ""
+      }`}
+    >
         <div>
-            <h3>{title}</h3>
+            <h4>{title}</h4>
             <div className={styles.video_duration}>
                 <p>Video:</p>
                 <p>{duration}</p>

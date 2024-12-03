@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { HeaderCustom } from "../../../Shared/Header/HeaderCustom";
-import { TablesContent } from "../../../Shared/TablesContent/TablesContent";
-import { VideoContainer } from "../../../Shared/VideoContainer/VideoContainer";
+import { TablesContent } from "../../../../../Shared/TablesContent/TablesContent";
+import { VideoContainer } from "../../../../../Shared/VideoContainer/VideoContainer";
+import { AccordionContent } from "../../../../../Shared/Accordion/AccordionContent";
 
 export const WhatTesting: React.FC = () => {
   const tableData = [
@@ -53,31 +53,36 @@ export const WhatTesting: React.FC = () => {
    ];
 
    const [videoUrl, setVideoUrl] = useState<string | null>(null);
+   const [activeVideo, setActiveVideo] = useState<string | null>(null); // Video activo
 
    const handleClickVideo = (link: string) => {
      const videoId = link.split("v=")[1]?.split("&")[0];
      const embedUrl = `https://www.youtube.com/embed/${videoId}`;
      setVideoUrl(embedUrl);
+     setActiveVideo(link); 
    };
 
-  return (
+   return (
     <>
-     <HeaderCustom title='¿Qué es el testing y por qué es necesario?'/>
-     <div>
-       {/* Verifica si hay una URL del video para mostrar el iframe */}
-       {videoUrl && (
-          <VideoContainer src={videoUrl}/>
-        )}
-     </div>
-     {tableData.map((item, index) => (
-        <TablesContent
-          key={index}
-          title={item.title}
-          link={item.link}
-          duration={item.duration}
-          onClickVideo={handleClickVideo} // Pasamos la función al componente
-        />
-      ))}
+      <AccordionContent
+        title="01 ¿Qué es el testing y por qué es necesario?"
+        child={
+          <div>
+            {/* Verifica si hay una URL del video para mostrar el iframe */}
+            {videoUrl && <VideoContainer src={videoUrl} />}
+            {tableData.map((item, index) => (
+              <TablesContent
+                key={index}
+                title={item.title}
+                link={item.link}
+                duration={item.duration}
+                onClickVideo={handleClickVideo} // Pasamos la función al componente
+                isActive={activeVideo === item.link} // Compara si el video es activo
+              />
+            ))}
+          </div>
+        }
+      />
     </>
   );
 };

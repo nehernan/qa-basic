@@ -5,13 +5,12 @@
 
 import React from "react";
 import styles from "./Layout.module.scss"
-import { WhatTesting } from "../Content/components/WhatTesting/WhatTesting";
-
+import Testing from "../Content/components/Testing/Testing";
 
 const Layout: React.FC = () => {
   return (
     <div className={styles.containerLayout}>
-      <WhatTesting/>
+      <Testing/>
     </div>
   );
 };
