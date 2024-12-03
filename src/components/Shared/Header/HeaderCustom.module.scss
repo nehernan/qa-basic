@@ -1,0 +1,18 @@
+.header {
+    height: 80px;
+    align-items: center;
+    display: flex;
+    margin-bottom: 1rem;
+    padding: 1rem 2rem;
+    color: #ffff;
+    background-color: #415c6b;
+    border-radius: 8px;
+    position: sticky;
+    top: .5rem;
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: .5rem 1rem;
+    }
+}
