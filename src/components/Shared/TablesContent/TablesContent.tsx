@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./TablesContent.module.scss"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCoffee, faPlay } from '@fortawesome/free-solid-svg-icons';
+import { faPlay } from '@fortawesome/free-solid-svg-icons';
 
 interface TableContentProps {
     title: string;
