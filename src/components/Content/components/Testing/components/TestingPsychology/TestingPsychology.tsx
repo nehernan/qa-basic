@@ -5,9 +5,21 @@ import { TablesContent } from "../../../../../Shared/TablesContent/TablesContent
 
 export const TestingPsychology: React.FC = () => {
   const tableData = [
-    { title: 'Introducción', link: 'https://www.youtube.com/watch?v=rBdk2yhse48&list=PLfWSKMW94oTaqcB7Rfs4Z4m8gp_dmIHEi', duration: '2:44 min' },
-    { title: 'M1. Sistemas de software', link: 'https://www.youtube.com/watch?v=sgU7OnMQsjA&list=PLfWSKMW94oTaqcB7Rfs4Z4m8gp_dmIHEi&index=2', duration: '13:43 min' },
-    { title: 'M1. Causas de defectos', link: 'https://www.youtube.com/watch/v=LUEDggRGFbI&list=PLfWSKMW94oTaqcB7Rfs4Z4m8gp_dmIHEi&index=3', duration: '6:54 min' },
+    {
+      title: 'M3. ¿Quién es un tester?',
+      link: 'https://www.youtube.com/watch?v=BnZjVQHQ4Ac&list=PLfWSKMW94oTaqcB7Rfs4Z4m8gp_dmIHEi&index=14',
+      duration: '11:31 min'
+    },
+    {
+      title: 'M3. Tester VS World',
+      link: 'https://www.youtube.com/watch?v=6M-lQ4Oh07c&list=PLfWSKMW94oTaqcB7Rfs4Z4m8gp_dmIHEi&index=15',
+      duration: '11:14 min'
+    },
+    {
+      title: 'M3. Todo puede ser mejor.',
+      link: 'https://www.youtube.com/watch?v=Dmc7Y22RIuo&list=PLfWSKMW94oTaqcB7Rfs4Z4m8gp_dmIHEi&index=16',
+      duration: '9:34 min'
+    }
   ];
 
   const [videoUrl, setVideoUrl] = useState<string | null>(null);

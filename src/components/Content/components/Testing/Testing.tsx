@@ -3,6 +3,9 @@ import { WhatTesting } from "./components/WhatTesting/WhatTesting";
 import { TestingFundaments } from "./components/TestingFundaments/TestingFundaments";
 import { TestingPsychology } from "./components/TestingPsychology/TestingPsychology";
 import { HeaderCustom } from "../../../Shared/Header/HeaderCustom";
+import { TestingLevel } from "./components/TestingLevel/TestingLevel";
+import { TestingSoftwareModel } from "./components/TestingSoftwareModel/TestingSoftwareModel";
+import { TestingMaintenance } from "./components/TestingMaintenance/TestingMaintenance";
 
 const Testing: React.FC = () => {
   return (
@@ -11,6 +14,9 @@ const Testing: React.FC = () => {
       <WhatTesting />
       <TestingFundaments />
       <TestingPsychology /> 
+      <TestingSoftwareModel/>
+      <TestingLevel/>
+      <TestingMaintenance/>
     </div>
   );
 };
