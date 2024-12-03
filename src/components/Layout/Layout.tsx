@@ -32,7 +32,10 @@ const Layout: React.FC = () => {
 
   // Este es el método que se invoca cuando se hace clic en un link para mostrar el video
   const handleClickVideo = (link: string) => {
-    setVideoUrl(link); // Asignamos el enlace del video a la URL
+    // Convertimos la URL al formato embed
+    const videoId = link.split("v=")[1]?.split("&")[0]; // Extrae el ID del video
+    const embedUrl = `https://www.youtube.com/embed/${videoId}`;
+    setVideoUrl(embedUrl); // Asigna la URL embebida al estado
   };
 
   return (
