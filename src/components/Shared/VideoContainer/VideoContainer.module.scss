@@ -1,0 +1,14 @@
+.videoContainer {
+  margin: 1rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+iframe {
+  min-width: 100%;
+  height: auto;
+  min-height: 300px;
+  border-radius: 12px;
+  overflow: hidden;
+}

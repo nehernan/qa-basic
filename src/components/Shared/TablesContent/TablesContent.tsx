@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./TablesContent.module.scss"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCoffee } from '@fortawesome/free-solid-svg-icons';
+import { faCoffee, faPlay } from '@fortawesome/free-solid-svg-icons';
 
 interface TableContentProps {
     title: string;
@@ -20,9 +20,9 @@ export const TablesContent: React.FC<TableContentProps> = ({title, link, duratio
                 <p>{duration}</p>
             </div>
         </div>
-        <button onClick={() => onClickVideo(link)}> <FontAwesomeIcon icon={faCoffee}   
- size="2x" /></button>
-{/*       <a href="{link}" target="_blank" rel="noopener noreferrer">play</a> */}
+        <button onClick={() => onClickVideo(link)}>
+            <FontAwesomeIcon icon={faPlay}  /> {/* size="2x" */}
+        </button>
     </div>
   );
 };
